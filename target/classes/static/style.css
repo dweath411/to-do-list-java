@@ -1,0 +1,115 @@
+/* Basic reset for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Use a more modern font */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container styling */
+.container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Heading style */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1e90ff;
+}
+
+/* Task form styling */
+.task-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.task-form input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.task-form button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.task-form button:hover {
+    background-color: #1c86ee;
+}
+
+/* Task list styling */
+.task-list {
+    list-style: none;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-list li:last-child {
+    border-bottom: none;
+}
+
+.task-list li span {
+    font-size: 1rem;
+    flex: 1;
+    text-align: left;
+}
+
+.complete-form button {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #32cd32;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.complete-form button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.complete-form button:hover:not([disabled]) {
+    background-color: #2e8b57;
+}
+
+.completed {
+    font-size: 1.5rem;
+    color: #32cd32;
+    margin-left: 10px;
+}

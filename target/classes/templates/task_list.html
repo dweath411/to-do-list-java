@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Your To-Do List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+<body>
+    <h1>Your Tasks</h1>
+    
+    <form method="post" action="/tasks/add">
+        <label for="description">Add a new task:</label>
+        <input type="text" id="description" name="description" required>
+        <button type="submit">Add Task</button>
+    </form>
+    
+    <ul>
+        <li th:each="task : ${tasks}">
+            <span th:text="${task.description}"></span>
+            <form method="post" action="/tasks/delete" style="display:inline;">
+                <input type="hidden" name="description" th:value="${task.description}">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    </ul>
+    
+    <a href="/">Go Back</a>
+</body>
+</html>
+
+<!-- This page is for the task list-->
