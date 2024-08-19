@@ -34,4 +34,3 @@ This project can be extended with additional features, such as:
 - Marking tasks as complete
 - Storing tasks in a database
 
-### Conclusion
